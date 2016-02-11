@@ -1,6 +1,6 @@
 {
   "name": "github-following",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get a list of users a user is following.",
   "author": {
     "name": "Athan Reines",
