@@ -101,11 +101,12 @@ following( opts, clbk );
 */
 function clbk( error, data, info ) {
 	if ( info ) {
-		process.stderr.write( JSON.stringify( info ) + '\n' );
+		process.stderr.write( JSON.stringify( info )+'\n', 'utf8' );
 	}
 	if ( error ) {
-		process.stderr.write( error.message );
-		return;
+		process.stderr.write( error.message, 'utf8' );
+		return process.exit( 1 );
 	}
-	process.stdout.write( JSON.stringify( data ) + '\n' );
+	process.stdout.write( JSON.stringify( data )+'\n', 'utf8' );
+	process.exit( 0 );
 }
